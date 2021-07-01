@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0362D91D26843D2C002927B5 /* ParagonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D91C26843D2C002927B5 /* ParagonApp.swift */; };
+		0362D91F26843D2C002927B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D91E26843D2C002927B5 /* ContentView.swift */; };
+		0362D92126843D31002927B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0362D92026843D31002927B5 /* Assets.xcassets */; };
+		0362D92426843D31002927B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0362D92326843D31002927B5 /* Preview Assets.xcassets */; };
+		0362D93026843E64002927B5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D92F26843E64002927B5 /* HomeView.swift */; };
+		0362D93226843EB3002927B5 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D93126843EB3002927B5 /* Credentials.swift */; };
+		0362D93426843F02002927B5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D93326843F02002927B5 /* AuthService.swift */; };
+		0362D93726844202002927B5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D93626844202002927B5 /* Extensions.swift */; };
+		0362D939268442F0002927B5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D938268442F0002927B5 /* LoginViewModel.swift */; };
+		0362D93B26844575002927B5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D93A26844575002927B5 /* LoginView.swift */; };
+		0362D93E26844681002927B5 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D93D26844681002927B5 /* RegisterView.swift */; };
+		0362D9402684469A002927B5 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D93F2684469A002927B5 /* LandingView.swift */; };
+		0362D942268448D2002927B5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D941268448D2002927B5 /* Constants.swift */; };
+		0362D9452684538F002927B5 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9442684538F002927B5 /* TextFieldStyle.swift */; };
+		0362D947268454CC002927B5 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D946268454CC002927B5 /* ButtonStyle.swift */; };
+		0362D949268457AB002927B5 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D948268457AB002927B5 /* RegisterViewModel.swift */; };
+		0362D94B268458C9002927B5 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D94A268458C9002927B5 /* NewUser.swift */; };
+		0362D94D26845B16002927B5 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D94C26845B16002927B5 /* PasswordResetView.swift */; };
+		0362D94F26845B41002927B5 /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D94E26845B41002927B5 /* PasswordResetViewModel.swift */; };
+		0362D951268B7A0F002927B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D950268B7A0F002927B5 /* User.swift */; };
+		0362D953268D82ED002927B5 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D952268D82ED002927B5 /* Authentication.swift */; };
+		0362D955268D86B0002927B5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D954268D86B0002927B5 /* SettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0362D91926843D2C002927B5 /* Auragon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auragon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0362D91C26843D2C002927B5 /* ParagonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagonApp.swift; sourceTree = "<group>"; };
+		0362D91E26843D2C002927B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0362D92026843D31002927B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0362D92326843D31002927B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0362D92526843D31002927B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0362D92F26843E64002927B5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0362D93126843EB3002927B5 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		0362D93326843F02002927B5 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		0362D93626844202002927B5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0362D938268442F0002927B5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		0362D93A26844575002927B5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0362D93D26844681002927B5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		0362D93F2684469A002927B5 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		0362D941268448D2002927B5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0362D9442684538F002927B5 /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
+		0362D946268454CC002927B5 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		0362D948268457AB002927B5 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		0362D94A268458C9002927B5 /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
+		0362D94C26845B16002927B5 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
+		0362D94E26845B41002927B5 /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
+		0362D950268B7A0F002927B5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0362D952268D82ED002927B5 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		0362D954268D86B0002927B5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0362D91626843D2C002927B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0362D91026843D2C002927B5 = {
+			isa = PBXGroup;
+			children = (
+				0362D91B26843D2C002927B5 /* Auragon */,
+				0362D91A26843D2C002927B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0362D91A26843D2C002927B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0362D91926843D2C002927B5 /* Auragon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0362D91B26843D2C002927B5 /* Auragon */ = {
+			isa = PBXGroup;
+			children = (
+				0362D935268441D7002927B5 /* Utilities */,
+				0362D92E26843E1B002927B5 /* Services */,
+				0362D92D26843E0E002927B5 /* ViewModels */,
+				0362D92C26843E08002927B5 /* Models */,
+				0362D92B26843DFD002927B5 /* Views */,
+				0362D91C26843D2C002927B5 /* ParagonApp.swift */,
+				0362D92026843D31002927B5 /* Assets.xcassets */,
+				0362D92526843D31002927B5 /* Info.plist */,
+				0362D92226843D31002927B5 /* Preview Content */,
+			);
+			path = Auragon;
+			sourceTree = "<group>";
+		};
+		0362D92226843D31002927B5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0362D92326843D31002927B5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0362D92B26843DFD002927B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0362D93C2684466B002927B5 /* Auth */,
+				0362D91E26843D2C002927B5 /* ContentView.swift */,
+				0362D92F26843E64002927B5 /* HomeView.swift */,
+				0362D954268D86B0002927B5 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0362D92C26843E08002927B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0362D93126843EB3002927B5 /* Credentials.swift */,
+				0362D94A268458C9002927B5 /* NewUser.swift */,
+				0362D950268B7A0F002927B5 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0362D92D26843E0E002927B5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0362D938268442F0002927B5 /* LoginViewModel.swift */,
+				0362D948268457AB002927B5 /* RegisterViewModel.swift */,
+				0362D94E26845B41002927B5 /* PasswordResetViewModel.swift */,
+				0362D952268D82ED002927B5 /* Authentication.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0362D92E26843E1B002927B5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0362D93326843F02002927B5 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0362D935268441D7002927B5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0362D9432684535C002927B5 /* Modifiers */,
+				0362D93626844202002927B5 /* Extensions.swift */,
+				0362D941268448D2002927B5 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0362D93C2684466B002927B5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0362D93A26844575002927B5 /* LoginView.swift */,
+				0362D93D26844681002927B5 /* RegisterView.swift */,
+				0362D93F2684469A002927B5 /* LandingView.swift */,
+				0362D94C26845B16002927B5 /* PasswordResetView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		0362D9432684535C002927B5 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				0362D9442684538F002927B5 /* TextFieldStyle.swift */,
+				0362D946268454CC002927B5 /* ButtonStyle.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0362D91826843D2C002927B5 /* Auragon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0362D92826843D31002927B5 /* Build configuration list for PBXNativeTarget "Auragon" */;
+			buildPhases = (
+				0362D91526843D2C002927B5 /* Sources */,
+				0362D91626843D2C002927B5 /* Frameworks */,
+				0362D91726843D2C002927B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Auragon;
+			productName = Paragon;
+			productReference = 0362D91926843D2C002927B5 /* Auragon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0362D91126843D2C002927B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					0362D91826843D2C002927B5 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 0362D91426843D2C002927B5 /* Build configuration list for PBXProject "Auragon" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0362D91026843D2C002927B5;
+			productRefGroup = 0362D91A26843D2C002927B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0362D91826843D2C002927B5 /* Auragon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0362D91726843D2C002927B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0362D92426843D31002927B5 /* Preview Assets.xcassets in Resources */,
+				0362D92126843D31002927B5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0362D91526843D2C002927B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0362D947268454CC002927B5 /* ButtonStyle.swift in Sources */,
+				0362D93E26844681002927B5 /* RegisterView.swift in Sources */,
+				0362D94F26845B41002927B5 /* PasswordResetViewModel.swift in Sources */,
+				0362D942268448D2002927B5 /* Constants.swift in Sources */,
+				0362D94D26845B16002927B5 /* PasswordResetView.swift in Sources */,
+				0362D93026843E64002927B5 /* HomeView.swift in Sources */,
+				0362D91F26843D2C002927B5 /* ContentView.swift in Sources */,
+				0362D93426843F02002927B5 /* AuthService.swift in Sources */,
+				0362D93226843EB3002927B5 /* Credentials.swift in Sources */,
+				0362D93726844202002927B5 /* Extensions.swift in Sources */,
+				0362D9402684469A002927B5 /* LandingView.swift in Sources */,
+				0362D953268D82ED002927B5 /* Authentication.swift in Sources */,
+				0362D949268457AB002927B5 /* RegisterViewModel.swift in Sources */,
+				0362D94B268458C9002927B5 /* NewUser.swift in Sources */,
+				0362D955268D86B0002927B5 /* SettingsView.swift in Sources */,
+				0362D91D26843D2C002927B5 /* ParagonApp.swift in Sources */,
+				0362D951268B7A0F002927B5 /* User.swift in Sources */,
+				0362D9452684538F002927B5 /* TextFieldStyle.swift in Sources */,
+				0362D93B26844575002927B5 /* LoginView.swift in Sources */,
+				0362D939268442F0002927B5 /* LoginViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0362D92626843D31002927B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0362D92726843D31002927B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0362D92926843D31002927B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Auragon/Preview Content\"";
+				DEVELOPMENT_TEAM = 96YN6B6A4P;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Auragon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = fotonical.ios.auragon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0362D92A26843D31002927B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Auragon/Preview Content\"";
+				DEVELOPMENT_TEAM = 96YN6B6A4P;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Auragon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = fotonical.ios.auragon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0362D91426843D2C002927B5 /* Build configuration list for PBXProject "Auragon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0362D92626843D31002927B5 /* Debug */,
+				0362D92726843D31002927B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0362D92826843D31002927B5 /* Build configuration list for PBXNativeTarget "Auragon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0362D92926843D31002927B5 /* Debug */,
+				0362D92A26843D31002927B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0362D91126843D2C002927B5 /* Project object */;
+}
