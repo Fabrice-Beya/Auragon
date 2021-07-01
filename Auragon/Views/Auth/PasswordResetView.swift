@@ -59,7 +59,6 @@ struct PasswordResetView: View {
                 showPasswordReset = false
             })
         }
-        
     }
 }
 
