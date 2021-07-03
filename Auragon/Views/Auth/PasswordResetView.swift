@@ -13,20 +13,35 @@ struct PasswordResetView: View {
     @State private var showSuccessAlert = false
     
     var body: some View {
-        ZStack {
-            NavigationView{
+        NavigationView {
+            ZStack{
+                Color.backgroundColor.ignoresSafeArea()
                 VStack(spacing: 20){
-                    TextField("Email", text: $viewModel.email)
-                        .keyboardType(.emailAddress)
-                        .modifier(TextFieldStyle())
+                    VStack{
+                        if viewModel.invalidEmail {
+                            HStack{
+                                Text("Email is invalid")
+                                    .font(.caption)
+                                    .foregroundColor(.red)
+                                Spacer()
+                            }
+                            .padding(.horizontal, 40)
+                        }
+                        TextField("Email", text: $viewModel.email, onEditingChanged: { (editingChanged) in
+                            if !editingChanged {
+                                viewModel.validateEmail()
+                            }
+                        })
+                            .keyboardType(.emailAddress)
+                            .modifier(TextFieldStyle(inValidInput: viewModel.resetInvalid))
+                    }
                     
                     Button(action: {viewModel.resetPassword{ success in
                         if success {
                             showSuccessAlert = true
                         }
                     }}, label: {
-                        Text("Submit")
-                            .modifier(ButtonStyle(isAccent: false))
+                        AuragonButton(title: "Submit", buttonConfig: .largeDark)
                     })
                     .opacity(viewModel.resetInvalid ? 0.6 : 1 )
                     .disabled(viewModel.resetInvalid  ? true : false )
@@ -38,12 +53,13 @@ struct PasswordResetView: View {
                                             showPasswordReset.toggle()
                                         }, label: {
                                             Text("Cancel")
-                                                .foregroundColor(Color(#colorLiteral(red: 0.2549019608, green: 0.7019607843, blue: 0.9725490196, alpha: 1)))
+                                                .foregroundColor(.accentColor)
                                         }))
                 .opacity(viewModel.isBusy ? 0.6 : 1 )
-            }
-            if viewModel.isBusy {
-                ProgressView()
+                
+                if viewModel.isBusy {
+                    ProgressView()
+                }
             }
         }
         .onTapGesture {

@@ -12,8 +12,26 @@ class LoginViewModel: ObservableObject {
     @Published var isBusy = false
     @Published var error: Authentication.AuthenticationError?
     
+    @Published var invalidEmail = false
+    func validateEmail() {
+        if credentials.email.isEmpty || !credentials.email.isEmail(){
+            invalidEmail = true
+        } else {
+            invalidEmail = false
+        }
+    }
+    
+    @Published var invalidPassword = false
+    func validatePassword(){
+        if  credentials.password.isEmpty || credentials.password.count<7 {
+            invalidPassword = true
+        } else {
+            invalidPassword = false
+        }
+    }
+    
     var loginDisabled: Bool {
-        credentials.email.isEmpty || credentials.password.isEmpty
+       return credentials.email.isEmpty || !credentials.email.isEmail() || credentials.password.isEmpty || credentials.password.count<7
     }
     
     func login(complection: @escaping (Bool) -> Void){

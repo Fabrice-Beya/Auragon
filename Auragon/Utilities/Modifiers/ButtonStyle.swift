@@ -12,7 +12,7 @@ struct ButtonStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.headline)
-            .foregroundColor(isAccent ? Color.accentColor : Color.white)
+            .foregroundColor(.accentColor)
             .padding()
             .frame(width: formItemWidth, height: formItemHeight)
             .background(isAccent ? Color.white : Color.accentColor)

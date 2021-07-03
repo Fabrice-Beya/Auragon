@@ -11,24 +11,57 @@ struct LoginView: View {
     @EnvironmentObject var authentication: Authentication
     @StateObject var viewModel = LoginViewModel()
     @State var showPasswordReset = false
+    @State var typing = false
     @Binding var isShowingLogin: Bool;
+    @State var passwordTapped = false
     
     var body: some View {
-        ZStack {
-            NavigationView{
+        NavigationView{
+            ZStack{
+                Color.backgroundColor.ignoresSafeArea()
                 VStack(spacing: 20){
-                    TextField("Email", text: $viewModel.credentials.email)
-                        .keyboardType(.emailAddress)
-                        .modifier(TextFieldStyle())
+                    VStack{
+                        if viewModel.invalidEmail {
+                            HStack{
+                                Text("Email is invalid")
+                                    .font(.caption)
+                                    .foregroundColor(.red)
+                                Spacer()
+                            }
+                            .padding(.horizontal, 40)
+                        }
+                        
+                        TextField("Email", text: $viewModel.credentials.email, onEditingChanged: { (editingChanged) in
+                            if !editingChanged {
+                                viewModel.validateEmail()
+                            }
+                        })
+                            .keyboardType(.emailAddress)
+                            .modifier(TextFieldStyle(inValidInput: viewModel.invalidEmail))
+                    }
                     
-                    SecureField("Password", text: $viewModel.credentials.password)
-                        .modifier(TextFieldStyle())
+                    VStack{
+                        if viewModel.invalidPassword {
+                            HStack{
+                                Text("Password is invalid")
+                                    .font(.caption)
+                                    .foregroundColor(.red)
+                                Spacer()
+                            }
+                            .padding(.horizontal, 40)
+                        }
+                        
+                        SecureField("Password", text: $viewModel.credentials.password)
+                            .modifier(TextFieldStyle(inValidInput: viewModel.invalidPassword))
+                            .onTapGesture {
+                                passwordTapped.toggle()
+                            }
+                    }
                     
                     Button(action: {viewModel.login{ success in
                         authentication.updatedAthentication(success: success)
                     }}, label: {
-                        Text("Login")
-                            .modifier(ButtonStyle(isAccent: false))
+                        AuragonButton(title: "Login", buttonConfig: .largeDark)
                     })
                     .opacity(viewModel.loginDisabled ? 0.6 : 1 )
                     .disabled(viewModel.loginDisabled  ? true : false )
@@ -55,19 +88,29 @@ struct LoginView: View {
                                             isShowingLogin.toggle()
                                         }, label: {
                                             Text("Cancel")
-                                                .foregroundColor(Color(#colorLiteral(red: 0.2549019608, green: 0.7019607843, blue: 0.9725490196, alpha: 1)))
+                                                .foregroundColor(.accentColor)
                                         }))
                 .opacity(viewModel.isBusy ? 0.6 : 1 )
+                .onTapGesture {
+                    UIApplication.shared.dismissKeyboard()
+                    if passwordTapped {
+                        viewModel.validatePassword()
+                    }
+                }
+                
+                if viewModel.isBusy {
+                    ProgressView()
+                }
             }
-            if viewModel.isBusy {
-                ProgressView()
+            .onTapGesture {
+                UIApplication.shared.dismissKeyboard()
+                if passwordTapped {
+                    viewModel.validatePassword()
+                }
             }
-        }
-        .onTapGesture {
-            UIApplication.shared.dismissKeyboard()
-        }
-        .alert(item: $viewModel.error){ error in
-            Alert(title: Text("Invalid Login"), message: Text(error.localizedDescription))
+            .alert(item: $viewModel.error){ error in
+                Alert(title: Text("Invalid Login"), message: Text(error.localizedDescription))
+            }
         }
     }
 }

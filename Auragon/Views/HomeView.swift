@@ -8,24 +8,32 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var isShowingSettingsView = false
+    @State var showSettingsView = false
     
     var body: some View {
-        VStack{
-            HStack{
-                Spacer()
-                Button(action: {isShowingSettingsView.toggle()}, label: {
-                    Image(systemName: "gear")
-                        .font(.title)
-                })
-                .buttonStyle(PlainButtonStyle())
-                .fullScreenCover(isPresented: $isShowingSettingsView, content: {
-                    SettingsView(isShowingSettingsView: $isShowingSettingsView)
-                })
-            }   
-            .padding()
-            
-            Spacer()
+        
+        NavigationView{
+            ZStack {
+                Color.backgroundColor.ignoresSafeArea()
+                
+                VStack{
+                    Text("Weldome Home")
+                }
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        Button(action: {
+                            showSettingsView.toggle()
+                        }, label: {
+                            Image(systemName: "gear")
+                                .font(.title)
+                                .foregroundColor(.textDarkColor)
+                        })
+                        .fullScreenCover(isPresented: $showSettingsView, content: {
+                            SettingsView(showSettingsView: $showSettingsView)
+                        })
+                    }
+            }
+            }
         }
     }
 }

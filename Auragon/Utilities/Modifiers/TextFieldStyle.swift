@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct TextFieldStyle: ViewModifier {
+    let inValidInput: Bool
+    
     func body(content: Content) -> some View {
         content
             .padding()
             .padding(.horizontal, 8)
-            .background(Color.darkAccent)
+            .background(Color.shadowColor)
             .clipShape(Capsule())
-            .shadow(color: Color.black.opacity(0.05), radius: 5, x: 1, y: 1)
-            .shadow(color: Color.black.opacity(0.05), radius: 5, x: -1, y: -1)
+            .shadow(color: inValidInput ? Color.red.opacity(0.08) : Color.black.opacity(0.08), radius: 5, x: 1, y: 1)
+            .shadow(color: inValidInput ? Color.red.opacity(0.08) : Color.black.opacity(0.08), radius: 5, x: -1, y: -1)
             .frame(width: formItemWidth, height: formItemHeight)
             .autocapitalization(.none)
     }
@@ -23,7 +25,18 @@ struct TextFieldStyle: ViewModifier {
 
 struct TextFieldStyle_Previewer: PreviewProvider {
     static var previews: some View {
-        TextField("Email", text: .constant(""))
-            .modifier(TextFieldStyle())
+        VStack{
+            HStack{
+                Text("Email is invalid")
+                    .font(.caption)
+                    .foregroundColor(.red)
+                Spacer()
+            }
+            .padding(.bottom, 4)
+            .padding(.horizontal, 40)
+            TextField("Email", text: .constant(""))
+                .modifier(TextFieldStyle(inValidInput: true))
+    //            .preferredColorScheme(.dark)
+        }
     }
 }

@@ -12,8 +12,17 @@ class PasswordResetViewModel: ObservableObject {
     @Published var isBusy = false
     @Published var error: Authentication.AuthenticationError?
     
+    @Published var invalidEmail = false
+    func validateEmail() {
+        if email.isEmpty || !email.isEmail(){
+            invalidEmail = true
+        } else {
+            invalidEmail = false
+        }
+    }
+    
     var resetInvalid: Bool {
-        email.isEmpty
+        email.isEmpty || !email.isEmail()
     }
     
     func resetPassword(complection: @escaping (Bool) -> Void){

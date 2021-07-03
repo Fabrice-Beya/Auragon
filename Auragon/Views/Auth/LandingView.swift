@@ -22,8 +22,7 @@ struct LandingView: View {
                 .padding()
             
             Button(action:{showRegisterView.toggle()}, label: {
-                Text("Create account")
-                    .modifier(ButtonStyle(isAccent: true))
+                AuragonButton(title: "Create Account", buttonConfig: .largeLight)
             })
             .padding(.horizontal, 32)
             .fullScreenCover(isPresented: $showRegisterView, content: {
@@ -47,7 +46,7 @@ struct LandingView: View {
                 LoginView(isShowingLogin: $showLoginView)
             })
         }
-        .background(Color.accentColor)
+        .background(Color.aceentBackgroundColor)
         .ignoresSafeArea()
     }
 }
