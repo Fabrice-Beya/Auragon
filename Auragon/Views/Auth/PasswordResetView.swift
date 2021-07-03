@@ -33,7 +33,7 @@ struct PasswordResetView: View {
                             }
                         })
                             .keyboardType(.emailAddress)
-                            .modifier(TextFieldStyle(inValidInput: viewModel.resetInvalid))
+                            .modifier(TextFieldStyle(inValidInput: viewModel.invalidEmail))
                     }
                     
                     Button(action: {viewModel.resetPassword{ success in
